@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class=hero-unit>
+        <h2>Welcome to NBSmart!</h2>
+
+        <table style="width:80%">
+          <tr style="font-weight: bold;">
+            <td>Project</td>
+            <td>Data</td>
+            <td>Integration</td>
+            <td>Access</td>
+          </tr>
+          
+	  {% for project, params in PROJECTS.items %}
+          <tr>
+            <td>{{ params.display_name }}</td>
+            <td>{{ params.version.data }}</td>
+            <td>{{ params.version.integration }}</td>
+            <td>
+              {% if params.access %}
+              <a href="{{ params.url }}">Private Instance</a>
+              {% else %}
+              <a href="{{ NBSTRN.access_request_link }}" target="_blank">Request</a>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+# OS X
+.DS_Store
+
+# Editor files
+*.sw?
+*~
+
+# Python ignores
+*.ipynb
+*.py?
+*.egg
+*.egg-info
+pip-log.txt
+build.txt
+
+# Server-related
+*.sock
+
+# Distribution related files
+dist
+sdist
+build
+MANIFEST
+
+

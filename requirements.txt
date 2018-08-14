@@ -1,0 +1,7 @@
+Django==1.11.5
+ldap3==2.3
+psycopg2==2.7.3.1
+pyasn1==0.3.6
+pytz==2017.2
+uWSGI==2.0.15
+

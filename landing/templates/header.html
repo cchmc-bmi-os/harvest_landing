@@ -1,0 +1,13 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class=navbar-inner>
+    <div class=container-fluid>
+      <a href="{% url "landing" %}"><span class=brand>NBSmart</span></a>
+      <ul class="nav">
+        <li><a href={{ NBSTRN.url }}><i class="icon-home"></i> {{ NBSTRN.display_name }}</a></li>
+      </ul>
+      <ul class="nav">
+        <li><a href={{ NBSTRN.url }}><i> {{ USER.username|default_if_none:"Login" }}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
